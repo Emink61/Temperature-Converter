@@ -1,11 +1,11 @@
 const input = document.getElementById("tempInput");
-const select = document.getElementById("conversionType")
+const select = document.getElementById("conversionType");
 const button = document.getElementById("convertBtn");
 let display = document.getElementById("result");
 
 function convert() {
     let get = select.value;
-    let num = Number(input.value)
+    let num = Number(input.value);
     if (get === "cToF"){
         input.value = "";
         display.textContent = (num * 9/5) +32;
@@ -20,11 +20,12 @@ function convert() {
         display.textContent = num - 273;
     } else {
         input.value = "";
-        display.textContent = "Something went wrong!"
+        display.textContent = "Something went wrong!";
     }
 }
 
 button.addEventListener("click", function(){
     convert();
 });
+
 
